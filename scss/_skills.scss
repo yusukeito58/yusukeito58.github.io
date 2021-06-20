@@ -1,0 +1,95 @@
+@media only screen and (min-width: 768px) {
+  .skill-outer {
+    float: left;
+    width: 50%;
+  }
+  .skill-outer:nth-child(2n) {
+    padding-left: 25px;
+  }
+  .skill-outer:nth-child(2n + 1) {
+    padding-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .skill-outer:last-child {
+    margin: 0;
+  }
+  .skill-outer {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+}
+
+.skill-set {
+  max-height: 600px;
+  padding: 10px;
+  border-radius: 1rem;
+}
+
+.skill-nav {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+.skill-nav ul li {
+  display: inline-block;
+  transition: all 0.1s linear 0s;
+}
+
+.skill-nav ul li:hover {
+  border-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.skill-outer {
+  margin-bottom: 50px;
+}
+
+.skill-outer h4 {
+  font-size: 1rem;
+  font-family: 'Lato';
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.skill-outer h4 span {
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  color: #6e6e6e;
+  font: 600 13px open sans, sans-serif;
+  margin-left: 10px;
+  padding: 2px 6px;
+  position: relative;
+}
+.skill-outer h4 span::before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: #fff;
+  border-width: 5px;
+  margin-top: -5px;
+}
+
+.imageWrapper,
+.progress-bar {
+  position: relative;
+}
+.progress,
+.progress-bar {
+  box-shadow: none;
+  height: 6px;
+}
+.progress {
+  background: #d2d2d2 none repeat scroll 0 0;
+  border-radius: 15px;
+  margin: 0;
+}
+.progress-bar {
+  background: $secondary none repeat scroll 0 0;
+}

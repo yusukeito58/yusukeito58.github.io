@@ -1,0 +1,150 @@
+// Styling for the portfolio section
+.portfolio {
+  margin-bottom: -15px;
+  .portfolio-item {
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    margin-bottom: 15px;
+    .portfolio-item-caption {
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      opacity: 0;
+      background-color: fade-out($primary, 0.1);
+      &:hover {
+        opacity: 1;
+      }
+      .portfolio-item-caption-content {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media (min-width: 576px) {
+    margin-bottom: -30px;
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.portfolio-modal {
+  .portfolio-modal-dialog {
+    padding: 3rem 1rem;
+    min-height: calc(100vh - 2rem);
+    margin: 1rem calc(1rem - 8px);
+    position: relative;
+    z-index: 2;
+    -moz-box-shadow: 0 0 3rem 1rem fade-out(black, 0.5);
+    -webkit-box-shadow: 0 0 3rem 1rem fade-out(black, 0.5);
+    box-shadow: 0 0 3rem 1rem fade-out(black, 0.5);
+    .close-button {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      i {
+        line-height: 38px;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .portfolio-modal-dialog {
+      min-height: 100vh;
+      padding: 5rem;
+      margin: 3rem calc(3rem - 8px);
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+// Add
+
+.portfolioWrapper {
+  max-height: 450px;
+  padding: 0;
+}
+.portfolioWrapper img {
+  width: 100%;
+  transition: all 300ms ease-in-out 0s;
+}
+.portfolioWrapper .imageHover:hover {
+  transform: scale(1.1);
+  z-index: 999;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.mix {
+  display: none;
+  padding: 3px;
+}
+
+.imageWrapper:hover .imageHover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imageHover,
+.imageHover div {
+  position: absolute;
+  width: 100%;
+}
+.imageHover {
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+  color: #fff;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  transition: all 0.3s ease-out 0s;
+  visibility: hidden;
+}
+.imageHover div {
+  text-align: center;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+.imageHover h3 {
+  color: #fff;
+}
+
+.portfolio-filter {
+  margin-top: 25px;
+}
+.portfolio-filter ul li {
+  display: inline-block;
+  transition: all 0.1s linear 0s;
+}
+.imageHover span,
+.resume-box span {
+  font-style: italic;
+}
+
+.portfolio-filter ul li:hover {
+  border-color: #141414;
+  cursor: pointer;
+}
+.portfolio-filter ul li.active {
+  border-color: #141414;
+}
+
+.popup-box {
+  background: #fff none repeat scroll 0 0;
+  margin: 0 auto;
+  max-width: 740px;
+  position: relative;
+  width: auto;
+}
+.popup-box div {
+  padding: 30px;
+}
+.popup-box img {
+  width: 100%;
+}
